@@ -1,0 +1,16 @@
+﻿@model StajerBlognet6.Core.Data.Filter.UserLoginFilter
+@{
+}
+@{
+    if (Model != null && Model.Message != null)
+    {
+        <p>@Model.Message</p>
+    }
+}
+<form action="/Login" method="post">
+    <label>Email</label>
+    @Html.TextBoxFor(s=>s.Email)<br />
+    <label>Şifre</label>
+    @Html.PasswordFor(s=>s.Password)<br />
+    <button type="submit">Giriş Yap</button>
+</form>
